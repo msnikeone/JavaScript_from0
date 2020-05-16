@@ -1,38 +1,21 @@
 ' use strict ';
-// console.log(myName); undefined
-var myName = 'Mykola';
-console.log(myName);
+let money = prompt("Ваш бюджет на місяц?");
+let time = prompt("Ввдіть дату в форматі YYYY-MM-DD");
 
-// console.log(secondName);  Cannot access 'secondName' before initialization
-let secondName = "Nike";
-console.log(secondName);
-
-
-const pi = 3.14;
-console.log(pi);
-
-let myCar = {
-    color: 'red',
-    motor: "disel",
-    speed: 180
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {} ,
+    optionalExpenses: {} ,
+    income: [ ],
+    savings: false,
 };
-console.log(myCar.speed);
-console.log(myCar.color);
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a2 = prompt("Во сколько обойдется?", ''),
+	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+    a4 = prompt("Во сколько обойдется?", '');
+    
+    appData.expenses[a1] = a2;
+    appData.expenses[a3] = a4;
 
-console.log(typeof("www" + 5));
-console.log("www" + 5);
-console.log(typeof(+ "www"));
-console.log(+ "129");
-
-alert("Hello");
-let answer = confirm("Ти тут ?");
-console.log(answer);
-
-let answerYour = prompt("Є 18?", "Yes");
-console.log(answerYour);
-console.log(typeof(myCar));
-console.log(typeof(null));  // відома помилка продувлювало тип
-
-
-let x = 5; alert( x++ );
-let q = 5; alert( ++q ); 
+    alert(appData.budget / 30);
